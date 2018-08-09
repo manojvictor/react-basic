@@ -1,19 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Header from './header';
+import Footer from './footer';
 
 class App extends React.Component {
     constructor() {
         super();
-        this.name = "Manoj";
+        this.state = {
+            title: 'Welcome'
+        }
     }
   render() {
+      setTimeout(() => {
+          this.setState({title: 'Welcome Manoj'})
+      }, 2000);
+      
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React basic {this.name}!</h1>
-        </header>
+        <Header title={this.state.title}/>
+        <Header title={"Title"} name={"test"} />
+        <Footer />
+
       </div>
     );
   }
