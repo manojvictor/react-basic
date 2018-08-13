@@ -1,17 +1,9 @@
 import React from 'react';
 
-class Title extends React.Component {
-    constructor() {
-        super();
-        this.state = {name: 'Manoj'};
-    }
+export default class Title extends React.Component {
   render() {
-      console.log(this.props);
     return (
-          <h1 className="App-title">{this.props.title}!
-        </h1>
+          <h1 className="App-title">{this.props.title}!</h1>
     );
   }
 }
-
-export default Title;
