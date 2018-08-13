@@ -11,15 +11,18 @@ class App extends React.Component {
             title: 'Welcome'
         }
     }
+
+    changeTitle(title) {
+      this.setState({title});
+    }
   render() {
-      setTimeout(() => {
-          this.setState({title: 'Welcome Manoj'})
-      }, 2000);
+      // setTimeout(() => {
+      //     this.setState({title: 'Welcome Manoj'})
+      // }, 2000);
       
     return (
       <div className="App">
-        <Header title={this.state.title}/>
-        <Header title={"Title"} name={"test"} />
+        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title}/>
         <Footer />
 
       </div>
