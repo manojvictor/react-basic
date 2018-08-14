@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import logo from './logo.svg';
 
 import Title from './Header/title'
@@ -10,10 +11,10 @@ class Header extends React.Component {
 	}
   render() {
     return (
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        <Title title={this.props.title}/>
-        <input value={this.props.title} onChange={this.handleChange.bind(this)}/>
+		<header className="app-header">
+			{this.props.children}
+	        <Link to="archives">Archives</Link>
+	        <Link to="settings">Settings</Link>
         </header>
     );
   }

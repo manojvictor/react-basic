@@ -21,13 +21,21 @@ class App extends React.Component {
       // }, 2000);
       
     return (
-      <div className="App">
+      <div className="app">      
         <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title}/>
         <Footer />
-
       </div>
+
     );
   }
 }
 
 export default App;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Router from './router';
+
+// Now we can attach the router to the 'root' element like this:
+ReactDOM.render(Router, document.getElementById('root'));
